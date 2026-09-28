@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { TEAM_MEMBERS } from '../data/siteData';
 import { PageId } from '../components/Navbar';
 import { TeamMember } from '../types';
+import { getAssetUrl } from '../utils/assets';
 import { ArrowRight, Compass, ShieldCheck, Sun, Layers, GraduationCap } from 'lucide-react';
 
 interface AboutPageProps {
@@ -11,7 +12,6 @@ interface AboutPageProps {
 const TeamMemberPhoto: React.FC<{ member: TeamMember }> = ({ member }) => {
   const [hasError, setHasError] = useState(false);
 
-  // If image fails to load or hasn't been uploaded yet, render a dignified professional executive portrait placeholder
   if (hasError || !member.image) {
     const initials = member.name
       .split(' ')
@@ -33,7 +33,7 @@ const TeamMemberPhoto: React.FC<{ member: TeamMember }> = ({ member }) => {
 
   return (
     <img
-      src={member.image}
+      src={getAssetUrl(member.image)}
       alt={`${member.name} — ${member.role}`}
       referrerPolicy="no-referrer"
       onError={() => setHasError(true)}
@@ -68,7 +68,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             <div className="lg:col-span-5">
               <div className="rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-100 shadow-sm aspect-[4/3]">
                 <img
-                  src="https://images.unsplash.com/photo-160058515526-990dced4db0d?q=80&w=1200&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop"
                   alt="Vygraha architectural studio practice in Bengaluru"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
@@ -137,7 +137,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
                 key={member.name}
                 className="bg-white rounded-2xl border border-neutral-200 p-6 sm:p-8 shadow-sm hover:border-neutral-300 transition-colors flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8"
               >
-                {/* Disciplined, Uniform Headshot Frame (Consistent across all members) */}
+                {/* Disciplined, Uniform Headshot Frame */}
                 <div className="w-40 sm:w-44 md:w-48 aspect-[3/4] rounded-xl overflow-hidden border border-neutral-200 bg-neutral-100 shadow-sm shrink-0">
                   <TeamMemberPhoto member={member} />
                 </div>
