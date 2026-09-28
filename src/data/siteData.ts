@@ -1,4 +1,5 @@
 import { ServiceDiscipline, ProjectCaseStudy, TeamMember, Testimonial } from '../types';
+import { getAssetUrl } from '../utils/assets';
 
 export interface EnrichedSubService {
   id: string;
@@ -118,7 +119,7 @@ export const SERVICES_DATA: EnrichedServiceDiscipline[] = [
     title: 'Construction Services',
     badge: 'Discipline 4',
     shortDesc: 'End-to-end civil construction, masonry, waterproofing, fabrication, and outdoor landscaping.',
-    image: 'https://images.unsplash.com/photo-1541888946425-d0fbb186156a?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop',
     subServices: [
       {
         id: 'masonry',
@@ -136,13 +137,13 @@ export const SERVICES_DATA: EnrichedServiceDiscipline[] = [
         id: 'fabrication',
         name: '3. Fabrication',
         description: 'Fabrication is the process of using semi-finished or raw materials to make something from start to finish, as opposed to just assembling it. Our proficiency lies in making something from scratch and customised to your wishes thereby creating unique masterpieces',
-        image: 'https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?q=80&w=900&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=900&auto=format&fit=crop',
       },
       {
         id: 'landscaping',
         name: '4. Landscaping',
         description: 'In today’s world curb appeal and landscaping are as important as interiors. Whether it is building or installing a feature on your land, adding a patio, veranda, or even building a pergola or gazebo – you are in good and skilled hands.',
-        image: 'https://images.unsplash.com/photo-1558904541-efa8c4a08931?q=80&w=900&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=900&auto=format&fit=crop',
       },
     ],
   },
@@ -223,7 +224,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     education: 'Master Diploma in Interior Designing',
     experience: '15 Years Industry Experience',
     specialization: 'Construction Services, Technical Planning & Site Execution',
-    image: '/manju-s.png',
+    image: getAssetUrl('manju-s.png'),
     bio: 'In-depth knowledge and experience in Construction Services, with an excellent track record of managing execution with meticulous planning, technical knowledge, and 15 years of experience managing multiple projects across India.',
     paragraphs: [
       'In-depth knowledge and experience in Construction Services, has an excellent track record of managing execution with meticulous planning, and in-depth technical knowledge.',
@@ -239,7 +240,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     education: 'Turnkey Commercial & Residential Governance',
     experience: 'Over 25 Years of Industry Experience',
     specialization: 'Retail, QSR, Office Spaces, Centralised Kitchens & Premium Residential',
-    image: '/venugopal-pillai.png',
+    image: getAssetUrl('venugopal-pillai.png'),
     bio: 'Powerhouse of passion and expertise with over 25 years of experience delivering residential and commercial projects across South India, from QSR chains like KFC and Taco Bell to Italian architect collaborations.',
     paragraphs: [
       'With over 25 years of experience in Residential and Commercial projects across South India, founder AK Venugopal is a powerhouse of passion and expertise.',
@@ -256,7 +257,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     education: 'MA and PhD',
     experience: 'Over 10 Years Industry Experience',
     specialization: 'Large-scale Land Amalgamation, Government Liaison & Real Estate Strategy',
-    image: '/dr-gopalakrishna.png',
+    image: getAssetUrl('dr-gopalakrishna.png'),
     bio: 'Brings over 10 years of strategic insight and business acumen, specializing in large-scale land amalgamation, government liaison, plotted development across Bangalore, and financial institution collaborations.',
     paragraphs: [
       'With over 10 years of experience in client handling and the real estate sector, Dr. Gopalakrishna brings a wealth of industry knowledge, strategic insight, and business acumen to Vygraha.',
